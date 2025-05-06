@@ -89627,7 +89627,7 @@ $S:598}
 A.apc.prototype={
 $0(){var s=0,r=A.z(t.H),q=1,p=[],o,n,m,l
 var $async$$0=A.A(function(a,b){if(a===1){p.push(b)
-s=q}while(true)switch(s){case 0:m="assets/SCIENCE EXHIBITION MELA.pdf"
+s=q}while(true)switch(s){case 0:m="https://drive.google.com/file/d/15c0US8nQTvm2JGs9tjNGteABVyGy_-vZ/view?usp=share_link"
 q=3
 s=6
 return A.C(A.kL(A.d_(m,0,null),B.dM),$async$$0)
