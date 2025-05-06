@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -18,8 +18,59 @@
 
   <title>megahertz_robotics</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Loader styles */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #loader div {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #ccc;
+      border-top: 5px solid #ffc400;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Loader -->
+  <div id="loader">
+    <div></div>
+  </div>
+
+  <!-- Firebase Configuration -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  
+  <!-- Initialize Firebase -->
+  <script src="firebase-config.js"></script>
+  
   <script src="flutter_bootstrap.js" async></script>
+
+  <script>
+    // Hide loader once the page is fully loaded
+    window.addEventListener('load', function() {
+      document.getElementById('loader').style.display = 'none';
+    });
+  </script>
 </body>
 </html>
